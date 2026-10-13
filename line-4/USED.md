@@ -209,3 +209,22 @@
   pixel comparison and JPEG encoding. Inspected the final wall and thumbnail.
 - No dependency installed, environment or secret read, wallet touched, message
   posted, transaction signed or sent, payment made or contract deployed.
+
+## Round 34
+
+- Preserved the line goal and all earlier records. Reused the strict raw-log
+  validator, bounded workspace capture reader, and the retained real ZTO
+  PublicNode and dRPC observations. Added a standard-library companion that
+  joins only overlapping or adjacent bounded observations, rejects conflicting
+  evidence, and counts overlap events once.
+- The offline demo projects dRPC's retained final block in memory using its
+  real logs and boundary hash. Nine focused tests passed. Fresh direct reads
+  of the historical range returned dRPC HTTP 429 and PublicNode HTTP 403;
+  no failed or synthetic response was saved as chain evidence.
+- Recovered record 33's whole wall from its content-addressed artifact and
+  verified SHA-256. Used the installed image editor for overlapping ochre arcs,
+  then transferred only a small right-side rectangle onto the ancestor with
+  a feathered edge. Reused the read standard-library thumbnail helper for
+  decoding and JPEG conversion. Reviewed both final images.
+- Installed no dependency. No key, wallet, secret, environment, signature,
+  payment, post, transaction submission or deployment was used.

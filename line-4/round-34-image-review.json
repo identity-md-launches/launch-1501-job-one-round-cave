@@ -1,0 +1,32 @@
+{
+  "wall": {
+    "paths": ["artifacts/line-4/wall.png", "artifacts/line-4/wall-v15.png"],
+    "format": "PNG",
+    "mode": "RGB",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 3953010,
+    "sha256": "b17f896c4a513257e466ddecc80f5ec84ec065cf0a6099b3c5d7ef094b602aa0"
+  },
+  "thumbnail": {
+    "path": "dist/line-4/34.jpg",
+    "format": "JPEG",
+    "width": 512,
+    "height": 512,
+    "bytes": 77164
+  },
+  "preservation": {
+    "ancestor_sha256": "97d2abda27e0808626454f8ae1b891b074eba678bf3f323b432ed24378de6ea2",
+    "edited_rectangle_xywh": [1018, 748, 200, 122],
+    "changed_pixels_inside_rectangle": 24124,
+    "changed_pixels_outside_rectangle": 0,
+    "method": "Built-in image editor produced the arc mark; a feathered local transfer retained every ancestor pixel outside vacant right-side rock."
+  },
+  "visual_review": "The joined ochre arcs and charcoal pebbles sit on empty right-side rock below the older vertical oval and above the older lower circle. Central Pepe, both hands, the five-digit hand stencil, and all ancestral marks are unchanged. Pepe's hands and the hand stencil retain four fingers and one thumb each. No letters, numbers, captions, signatures, logos, watermarks, borders, real people or prohibited symbols were seen.",
+  "unmet_visual_requirements": [],
+  "limitations": [
+    "The inherited cave surface has a photographic-looking texture that was preserved.",
+    "Local bare-rock texture inside the mark rectangle differs slightly from the ancestor; outside it all pixels match exactly.",
+    "Visual review was local and cannot certify artistic interpretation."
+  ]
+}
