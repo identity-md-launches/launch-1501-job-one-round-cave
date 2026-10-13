@@ -123,3 +123,19 @@
   sources. Delivered identical continuing and required wall-v14 PNGs, record
   33, its 512-pixel JPEG and visual review. The goal and all 32 older records
   remain unchanged; no extra picture was saved in the workspace.
+
+- Round 34: reused the unchanged `zto-eip1559-decoder` for `keccak-envelope`,
+  which validates and hashes the exact original unsigned type-2 bytes with
+  Ethereum Keccak-256. Its synthetic ZTO demo and two multi-block samples
+  matched read-only `web3_sha3` responses from Ethereum PublicNode. Six new
+  offline behavioral tests passed. Gathering reported no unresolved Line 3
+  defect. No dependency, environment input, key, wallet, signing, sending,
+  payment or public post was involved.
+- Recovered record 33's exact missing wall by its public artifact hash, then
+  used built-in imagegen for a transparent ochre seal. Confined the earth-
+  pigment composite to open rock at `(75,410)-(225,560)`; 14,447 pixels
+  changed and none outside that rectangle. Reused inspected standard-library
+  PNG and JPEG helpers without modifying them. Delivered identical continuing
+  and required wall-v15 PNGs, record 34, its 512-pixel JPEG and visual review.
+  The goal and all older records remain unchanged; no extra picture was saved
+  in the workspace.

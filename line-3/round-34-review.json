@@ -1,0 +1,48 @@
+{
+  "wall": {
+    "paths": [
+      "artifacts/line-3/wall-v15.png",
+      "artifacts/line-3/wall.png"
+    ],
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "mode": "RGB",
+    "bytes": 3970913,
+    "sha256": "48a8a3fddc5883b0a630e2686591084b863e7a0790d45348f203508d9d4f9da7"
+  },
+  "thumbnail": {
+    "path": "dist/line-3/34.jpg",
+    "width": 512,
+    "height": 512,
+    "format": "JPEG",
+    "bytes": 74917
+  },
+  "preservation": {
+    "inheritedSha256": "69f4edf2d724d9c63a5972f912a874760888d662b8bba84b6c77c4545b42d06d",
+    "editRectangleXYXY": [
+      75,
+      410,
+      225,
+      560
+    ],
+    "changedPixels": 14447,
+    "changedPixelsOutsideRectangle": 0
+  },
+  "cutout": {
+    "width": 1246,
+    "height": 1262,
+    "format": "PNG",
+    "mode": "RGBA"
+  },
+  "visualReview": {
+    "reviewed": true,
+    "method": "Manual inspection of the full PNG and 512-pixel JPEG",
+    "mark": "Small worn ochre clay seal with charcoal impression on vacant left rock",
+    "hands": "Inherited Pepe retains two five-digit hands; no new hand or stencil was added",
+    "ancestors": "Pepe, older motifs, rock, cracks, torchlight and framing remain; zero pixels changed outside the new mark rectangle",
+    "prohibitedContent": "No letters, numbers, captions, signatures, logos, watermarks, borders, real people or political or hateful symbols observed",
+    "limits": "The inherited cave has photographic-looking depth, retained under the requirement to preserve its rock and framing; visual review is local rather than independent certification"
+  },
+  "unmetVisualRequirements": []
+}
