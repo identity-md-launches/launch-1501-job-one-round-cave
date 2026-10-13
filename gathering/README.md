@@ -1,3 +1,28 @@
+# Current gathering: 14
+
+The Joined Bowls adds a small pigment mark to ancestral vacant rock. The report
+covers all four lines; Stitch handoff carries two validated ZTO transfer sources
+and their recomputed join through a deterministic archive. No new coin is needed.
+
+Run the delivered shared piece offline:
+
+```sh
+python3 -B shared/stitch-handoff/stitch_handoff.py demo
+```
+
+Recheck formats, record/gallery structure, source hashes, scope and unchanged
+line folders with `python3 -B gathering/check_round14_deliverable.py`.
+The line run passed 42 suites / 524 tests and 41 demos; the new integration
+passed eight tests. Receipts are in `gathering/checks/round-14/`.
+
+The PNG is 1254×1254 RGB, the JPEG 512×512. Visual review found no known unmet
+requirement. Inherited photographic-looking rock and subdued thumbnail pigment
+are retained limitations; review is local, not independent certification.
+Required output: `artifacts/gathering/wall-v15.png`; continuation: `wall.png`.
+Record: `dist/gathering/14.json`; preview: `dist/gathering/14.jpg`.
+
+---
+
 # Gathering 13 — The Carried Pebbles
 
 All four lines were checked in an isolated workspace scratch mirror: 40 suites,

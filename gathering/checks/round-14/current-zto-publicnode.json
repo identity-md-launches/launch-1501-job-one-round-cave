@@ -1,0 +1,28 @@
+{
+  "captured_at": "2026-10-13T04:31:13Z",
+  "chain_id": 1,
+  "decimals": 18,
+  "decimals_block": 26181195,
+  "duplicate_count": 0,
+  "from_block": 26181194,
+  "from_block_anchor": {
+    "hash": "0x600148d382af6846fe8d4942afb23a6184bd47cf4bc5e20aa9edcd176543964c",
+    "number": 26181194
+  },
+  "head_at_capture": 26181195,
+  "limitations": "Single-provider observation; not a completeness or finality proof. Interior block hashes are retained but not independently verified.",
+  "provider_result": "validated",
+  "raw_logs": [],
+  "read_only": true,
+  "rpc": "https://ethereum-rpc.publicnode.com",
+  "schema_version": 3,
+  "to_block": 26181195,
+  "to_block_anchor": {
+    "hash": "0x6b9e15af2d5718fa99dedb2f1c8669dce39edd6b5f1a998f7134017f6d260c53",
+    "number": 26181195
+  },
+  "token": "ZTO",
+  "token_address": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+  "transfer_count": 0,
+  "transfers": []
+}

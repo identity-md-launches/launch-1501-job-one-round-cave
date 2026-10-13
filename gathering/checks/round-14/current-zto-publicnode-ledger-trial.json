@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "line-4/tools/transfer-window-ledger/ledger.py",
+    "--capture",
+    "gathering/checks/round-14/current-zto-publicnode.json"
+  ],
+  "exit": 0,
+  "stdout": "{\n  \"address_count\": 0,\n  \"addresses\": [],\n  \"chain_id\": 1,\n  \"decimals\": 18,\n  \"event_total\": \"0\",\n  \"event_total_raw\": \"0\",\n  \"from_block\": 26181194,\n  \"from_block_anchor\": {\n    \"hash\": \"0x600148d382af6846fe8d4942afb23a6184bd47cf4bc5e20aa9edcd176543964c\",\n    \"number\": 26181194\n  },\n  \"kind\": \"erc20-transfer-window-ledger\",\n  \"limitations\": \"Per-address Transfer-event flows in one bounded provider window; not balances, holders, complete history, trades, pool volume or finality. Self-transfers count once as touching and once in each direction, with zero net. Zero address is retained as an event endpoint, not a holder; mint/burn behavior is not independently verified. Sum of net flows is zero by construction, including zero address, and does not prove completeness or provider honesty.\",\n  \"read_only\": true,\n  \"schema_version\": 1,\n  \"sum_net_raw\": \"0\",\n  \"to_block\": 26181195,\n  \"to_block_anchor\": {\n    \"hash\": \"0x6b9e15af2d5718fa99dedb2f1c8669dce39edd6b5f1a998f7134017f6d260c53\",\n    \"number\": 26181195\n  },\n  \"token\": \"ZTO\",\n  \"token_address\": \"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\",\n  \"transfer_count\": 0,\n  \"validated\": true\n}\n",
+  "stderr": "",
+  "checked_at": "2026-10-13T04:31:13.983824+00:00"
+}

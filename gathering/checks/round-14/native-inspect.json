@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "line-2/tools/handoff-inspect/inspect_handoff.py",
+    "check",
+    "shared/stitch-handoff/examples/current-zto-stitch.zip"
+  ],
+  "exit": 2,
+  "stdout": "",
+  "stderr": "usage: inspect_handoff.py [-h] {demo,inspect} ...\ninspect_handoff.py: error: argument command: invalid choice: 'check' (choose from 'demo', 'inspect')\n"
+}

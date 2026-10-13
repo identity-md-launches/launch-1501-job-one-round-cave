@@ -1,0 +1,43 @@
+[
+  {
+    "capture": "current-zto-publicnode",
+    "requested_decimal": 26181194,
+    "generated_rpc_hex": "0x18f7e4a",
+    "returned_decimal": 26181194
+  },
+  {
+    "capture": "current-zto-publicnode",
+    "requested_decimal": 26181195,
+    "generated_rpc_hex": "0x18f7e4b",
+    "returned_decimal": 26181195
+  },
+  {
+    "capture": "current-zto-drpc",
+    "requested_decimal": 26181194,
+    "generated_rpc_hex": "0x18f7e4a",
+    "returned_decimal": 26181194
+  },
+  {
+    "capture": "current-zto-drpc",
+    "requested_decimal": 26181195,
+    "generated_rpc_hex": "0x18f7e4b",
+    "returned_decimal": 26181195
+  },
+  {
+    "capture": "historical-zto-drpc",
+    "requested_decimal": 26177298,
+    "generated_rpc_hex": "0x18f6f12",
+    "returned_decimal": 26177298
+  },
+  {
+    "capture": "historical-zto-drpc",
+    "requested_decimal": 26177309,
+    "generated_rpc_hex": "0x18f6f1d",
+    "returned_decimal": 26177309
+  },
+  {
+    "capture": "pinned-zto-supply",
+    "returned_rpc_hex": "0x18f7df1",
+    "returned_decimal": 26181105
+  }
+]

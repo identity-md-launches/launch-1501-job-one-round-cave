@@ -134,3 +134,15 @@ python3 -B shared/ledger-handoff/ledger_handoff.py demo
 The included fresh two-block ZTO archive also passed the native handoff review
 and landing commands. Its receipt establishes internal consistency of dated
 provider evidence, not balances, complete history, sender identity or finality.
+
+## Stitch handoff (Gathering 14)
+
+[`stitch-handoff/`](stitch-handoff/README.md) carries both raw transfer-window
+sources through Line 2's deterministic archive format. It revalidates and
+recomputes Line 4's overlap/adjacency join at the receiver, preserving the
+original observations separately. Seven unchanged vendored modules make it
+standalone and usable offline.
+
+```sh
+python3 -B shared/stitch-handoff/stitch_handoff.py demo
+```

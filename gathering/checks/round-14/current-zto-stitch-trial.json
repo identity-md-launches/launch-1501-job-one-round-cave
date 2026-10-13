@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "line-4/tools/transfer-window-stitch/stitch.py",
+    "--left",
+    "gathering/checks/round-14/current-zto-publicnode.json",
+    "--right",
+    "gathering/checks/round-14/current-zto-drpc.json"
+  ],
+  "exit": 0,
+  "stdout": "{\n  \"chain_id\": 1,\n  \"decimals\": 18,\n  \"from_block\": 26181194,\n  \"from_block_anchor\": {\n    \"hash\": \"0x600148d382af6846fe8d4942afb23a6184bd47cf4bc5e20aa9edcd176543964c\",\n    \"number\": 26181194\n  },\n  \"join_kind\": \"overlap\",\n  \"kind\": \"erc20-transfer-window-stitch\",\n  \"limitations\": \"A join combines two bounded provider observations. Matching overlap events and any shared observed block hashes do not prove that unobserved blocks share a chain, that a provider returned every log, finality, a token balance, or complete history. Adjacent windows have no shared block; a join is not a chain-continuity proof.\",\n  \"matching_shared_hash_blocks\": [\n    26181194,\n    26181195\n  ],\n  \"overlap_blocks\": 2,\n  \"read_only\": true,\n  \"schema_version\": 1,\n  \"sources\": [\n    {\n      \"from_block\": 26181194,\n      \"rpc\": \"https://ethereum-rpc.publicnode.com\",\n      \"to_block\": 26181195,\n      \"transfer_count\": 0\n    },\n    {\n      \"from_block\": 26181194,\n      \"rpc\": \"https://eth.drpc.org\",\n      \"to_block\": 26181195,\n      \"transfer_count\": 0\n    }\n  ],\n  \"status\": \"joined\",\n  \"to_block\": 26181195,\n  \"to_block_anchor\": {\n    \"hash\": \"0x6b9e15af2d5718fa99dedb2f1c8669dce39edd6b5f1a998f7134017f6d260c53\",\n    \"number\": 26181195\n  },\n  \"token\": \"ZTO\",\n  \"token_address\": \"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\",\n  \"transfer_count\": 0,\n  \"transfers\": []\n}\n",
+  "stderr": "",
+  "checked_at": "2026-10-13T04:35:58.040463+00:00"
+}

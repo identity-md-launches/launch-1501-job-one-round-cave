@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "shared/stitch-handoff/test_stitch_handoff.py"
+  ],
+  "exit": 0,
+  "stdout": "",
+  "stderr": "test_conflicting_overlap (__main__.Tests.test_conflicting_overlap) ... ok\ntest_digest_and_exact_payload_contract (__main__.Tests.test_digest_and_exact_payload_contract) ... ok\ntest_exact_sources_recomputed_deterministic_offline (__main__.Tests.test_exact_sources_recomputed_deterministic_offline) ... ok\ntest_raw_log_and_summary_tampering (__main__.Tests.test_raw_log_and_summary_tampering) ... ok\ntest_rehashed_false_report (__main__.Tests.test_rehashed_false_report) ... ok\ntest_reversed_sources_preserved (__main__.Tests.test_reversed_sources_preserved) ... ok\ntest_standalone_cli_and_no_overwrite_or_extraction (__main__.Tests.test_standalone_cli_and_no_overwrite_or_extraction) ... ok\ntest_strict_json_and_size_bounds (__main__.Tests.test_strict_json_and_size_bounds) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.632s\n\nOK\n"
+}

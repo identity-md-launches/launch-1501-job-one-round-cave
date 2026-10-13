@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "line-2/tools/handoff-inspect/inspect_handoff.py",
+    "inspect",
+    "shared/stitch-handoff/examples/current-zto-stitch.zip"
+  ],
+  "exit": 0,
+  "stdout": "{\n  \"archive_bytes\": 3802,\n  \"archive_sha256\": \"170d08185ef709d2d74527fadbdf97a8f5d91c2cb5422564905540e69fd9b8ca\",\n  \"file_count\": 3,\n  \"files\": [\n    {\n      \"bytes\": 905,\n      \"path\": \"evidence/left.json\",\n      \"sha256\": \"8fb26e7f4da5f470afee74f6a5642452b7a08bc772d6212a6631544cbe70b45a\"\n    },\n    {\n      \"bytes\": 890,\n      \"path\": \"evidence/right.json\",\n      \"sha256\": \"864f172ad375f6a0eea421c5f7aa5f922ad0917f7c2463a8f65d82f0628e23f9\"\n    },\n    {\n      \"bytes\": 1146,\n      \"path\": \"review/stitch.json\",\n      \"sha256\": \"1540ea1231a25c53ec49d34f512381f38dbe5dec8acc165a05adf82c1b8f79ab\"\n    }\n  ],\n  \"format\": \"handoff-inspection-v1\",\n  \"limits\": {\n    \"archive_bytes\": 69206016,\n    \"files\": 1000,\n    \"manifest_bytes\": 524288,\n    \"metadata_bytes\": 524288,\n    \"payload_bytes\": 67108864\n  },\n  \"payload_bytes\": 2941,\n  \"trusted_digest_matched\": false,\n  \"verified\": true\n}\n",
+  "stderr": ""
+}

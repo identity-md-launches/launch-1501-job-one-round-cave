@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "record_number": 14,
+  "wall_dimensions": [
+    1254,
+    1254
+  ],
+  "wall_format": "8-bit RGB PNG",
+  "wall_sha256": "17e6c21c4836254c1f4576d4cd97557534537b6120b4d98fab45451d5ae3fa87",
+  "preview_dimensions": [
+    512,
+    512
+  ],
+  "preview_format": "JPEG",
+  "preview_bytes": 69683,
+  "changed_pixels_outside_rectangle": 0,
+  "unmet_visual_requirements": [],
+  "gallery_records": 157,
+  "gallery_bytes": 97049,
+  "source_paths_in_scope": true,
+  "line_folders_unchanged": true,
+  "shared_source_hashes_match": true
+}

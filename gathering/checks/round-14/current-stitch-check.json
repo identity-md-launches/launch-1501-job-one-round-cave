@@ -1,0 +1,58 @@
+{
+  "schema": "erc20-stitch-handoff/1",
+  "verified": true,
+  "network_used": false,
+  "archive_sha256": "170d08185ef709d2d74527fadbdf97a8f5d91c2cb5422564905540e69fd9b8ca",
+  "archive_bytes": 3802,
+  "trusted_digest_matched": false,
+  "source_bytes_sha256": {
+    "evidence/left.json": "8fb26e7f4da5f470afee74f6a5642452b7a08bc772d6212a6631544cbe70b45a",
+    "evidence/right.json": "864f172ad375f6a0eea421c5f7aa5f922ad0917f7c2463a8f65d82f0628e23f9"
+  },
+  "byte_reproducible": true,
+  "stitch_recomputed": true,
+  "stitch": {
+    "kind": "erc20-transfer-window-stitch",
+    "schema_version": 1,
+    "read_only": true,
+    "status": "joined",
+    "chain_id": 1,
+    "token": "ZTO",
+    "token_address": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+    "decimals": 18,
+    "from_block": 26181194,
+    "to_block": 26181195,
+    "from_block_anchor": {
+      "number": 26181194,
+      "hash": "0x600148d382af6846fe8d4942afb23a6184bd47cf4bc5e20aa9edcd176543964c"
+    },
+    "to_block_anchor": {
+      "number": 26181195,
+      "hash": "0x6b9e15af2d5718fa99dedb2f1c8669dce39edd6b5f1a998f7134017f6d260c53"
+    },
+    "sources": [
+      {
+        "rpc": "https://ethereum-rpc.publicnode.com",
+        "from_block": 26181194,
+        "to_block": 26181195,
+        "transfer_count": 0
+      },
+      {
+        "rpc": "https://eth.drpc.org",
+        "from_block": 26181194,
+        "to_block": 26181195,
+        "transfer_count": 0
+      }
+    ],
+    "join_kind": "overlap",
+    "overlap_blocks": 2,
+    "matching_shared_hash_blocks": [
+      26181194,
+      26181195
+    ],
+    "transfer_count": 0,
+    "transfers": [],
+    "limitations": "A join combines two bounded provider observations. Matching overlap events and any shared observed block hashes do not prove that unobserved blocks share a chain, that a provider returned every log, finality, a token balance, or complete history. Adjacent windows have no shared block; a join is not a chain-continuity proof."
+  },
+  "limitations": "Integrity and event accounting only; not sender identity, balances, completeness, finality, provider honesty or payload safety. Joining observations does not prove chain continuity; nothing is extracted."
+}

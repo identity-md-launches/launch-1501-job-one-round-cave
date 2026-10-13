@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "line-4/tools/erc20-transfer-window/transfer_window.py",
+    "--latest-window",
+    "2"
+  ],
+  "exit": 0,
+  "stdout": "{\n  \"captured_at\": \"2026-10-13T04:31:13Z\",\n  \"chain_id\": 1,\n  \"decimals\": 18,\n  \"decimals_block\": 26181195,\n  \"duplicate_count\": 0,\n  \"from_block\": 26181194,\n  \"from_block_anchor\": {\n    \"hash\": \"0x600148d382af6846fe8d4942afb23a6184bd47cf4bc5e20aa9edcd176543964c\",\n    \"number\": 26181194\n  },\n  \"head_at_capture\": 26181195,\n  \"limitations\": \"Single-provider observation; not a completeness or finality proof. Interior block hashes are retained but not independently verified.\",\n  \"provider_result\": \"validated\",\n  \"raw_logs\": [],\n  \"read_only\": true,\n  \"rpc\": \"https://ethereum-rpc.publicnode.com\",\n  \"schema_version\": 3,\n  \"to_block\": 26181195,\n  \"to_block_anchor\": {\n    \"hash\": \"0x6b9e15af2d5718fa99dedb2f1c8669dce39edd6b5f1a998f7134017f6d260c53\",\n    \"number\": 26181195\n  },\n  \"token\": \"ZTO\",\n  \"token_address\": \"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\",\n  \"transfer_count\": 0,\n  \"transfers\": []\n}\n",
+  "stderr": "",
+  "checked_at": "2026-10-13T04:31:13.828061+00:00"
+}

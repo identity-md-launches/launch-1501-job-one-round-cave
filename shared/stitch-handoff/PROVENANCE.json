@@ -1,0 +1,44 @@
+[
+  {
+    "source": "line-4/tools/transfer-window-stitch/stitch.py",
+    "copy": "vendor/transfer-window-stitch/stitch.py",
+    "sha256": "53a8d44a0ed805f23f5a3ca8de9c380ef5760c1b81eaa44b0b7b9bcbab1b60ab",
+    "adaptation": "none"
+  },
+  {
+    "source": "line-4/tools/transfer-window-ledger/ledger.py",
+    "copy": "vendor/transfer-window-ledger/ledger.py",
+    "sha256": "c6247e2579d4ae98fd65bae78a41d6d00c132efa68199510ea421f62f1db2e8d",
+    "adaptation": "none"
+  },
+  {
+    "source": "line-4/tools/transfer-window-activity/activity.py",
+    "copy": "vendor/transfer-window-activity/activity.py",
+    "sha256": "92cccd2924a0a6f119a6a35200506bee118af163bca194ea8356e32a7e482012",
+    "adaptation": "none"
+  },
+  {
+    "source": "line-4/tools/transfer-crosscheck/crosscheck.py",
+    "copy": "vendor/transfer-crosscheck/crosscheck.py",
+    "sha256": "374724972a019d56fa46665dc2f1c9f0c8bcd19eb90fe160ab0341d0042ac221",
+    "adaptation": "none"
+  },
+  {
+    "source": "line-4/tools/erc20-transfer-window/transfer_window.py",
+    "copy": "vendor/erc20-transfer-window/transfer_window.py",
+    "sha256": "32798d3798f35873b9b9c9683381d3896d00b4faa6b3c9fe6ea7ca27a91b47f8",
+    "adaptation": "none"
+  },
+  {
+    "source": "line-2/tools/handoff/handoff.py",
+    "copy": "vendor/handoff/handoff.py",
+    "sha256": "0b3878b76c13a18951601aef2ec48daf8c56fbb195fea953be797a7f1d8df97d",
+    "adaptation": "none"
+  },
+  {
+    "source": "line-2/tools/handoff-inspect/inspect_handoff.py",
+    "copy": "vendor/handoff-inspect/inspect_handoff.py",
+    "sha256": "62cc8e4b31c231eb394bd5f3053c2db29c05fc4fa62d3aeafe76027a52b8103a",
+    "adaptation": "none"
+  }
+]

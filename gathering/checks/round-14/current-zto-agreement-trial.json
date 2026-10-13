@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "line-4/tools/transfer-crosscheck/crosscheck.py",
+    "--left",
+    "gathering/checks/round-14/current-zto-publicnode.json",
+    "--right",
+    "gathering/checks/round-14/current-zto-drpc.json"
+  ],
+  "exit": 2,
+  "stdout": "",
+  "stderr": "transfer-crosscheck: invalid RPC endpoint: credential-free endpoint without query/fragment required\n",
+  "checked_at": "2026-10-13T04:35:57.971552+00:00"
+}

@@ -1,0 +1,49 @@
+{
+  "source_record": 13,
+  "record_number": 14,
+  "source_sha256": "b1ebb9e7f639fb5e3f8258c43ec2592681f3e66c549ec1efb974edb49bb36c77",
+  "wall_sha256": "17e6c21c4836254c1f4576d4cd97557534537b6120b4d98fab45451d5ae3fa87",
+  "png_dimensions": [
+    1254,
+    1254
+  ],
+  "png_format": "8-bit RGB PNG",
+  "png_bytes": 3811986,
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "jpeg_format": "baseline JPEG",
+  "jpeg_bytes": 69683,
+  "generated_motif_dimensions": [
+    1536,
+    1024
+  ],
+  "generated_motif_sha256": "d1e9b25be8eafa9f035723c57d43f70b7cc55823e1971cce50ae0afc526013aa",
+  "motif_crop": [
+    211,
+    283,
+    1317,
+    724
+  ],
+  "addition_rectangle": [
+    75,
+    400,
+    130,
+    135
+  ],
+  "changed_pixels": 12417,
+  "changed_pixels_outside_rectangle": 0,
+  "method": "Installed image tool motif; white paper removed in memory, earth pigment area-averaged into vacant rock.",
+  "visual_review": "PNG and 512px JPEG inspected; broad mouth, heavy-lidded eyes, inherited five-digit hands retained. No new hands or text.",
+  "hand_digits": {
+    "left": 5,
+    "right": 5
+  },
+  "unmet_visual_requirements": [],
+  "limitations": [
+    "Inherited rock retains photographic-looking texture.",
+    "The two bowls are tall after fitting the narrow vacant patch; pigment is subdued in the thumbnail.",
+    "Local visual judgment is not independent artistic certification."
+  ]
+}
