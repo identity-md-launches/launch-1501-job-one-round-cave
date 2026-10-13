@@ -1,0 +1,47 @@
+{
+  "number": 34,
+  "ancestor_sha256": "19751a7d5534fed62f71158542f758077b8726086359f821e1efc1c089ca95c4",
+  "wall_sha256": "82f449b64789a355e21770bdb6c40ee4519042db7685abe105e53506e62f8ab7",
+  "wall_paths": [
+    "artifacts/line-2/wall.png",
+    "artifacts/line-2/wall-v15.png"
+  ],
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "PNG",
+  "mode": "RGB",
+  "thumbnail": {
+    "path": "dist/line-2/34.jpg",
+    "dimensions": [
+      512,
+      512
+    ],
+    "format": "JPEG",
+    "bytes": 75313
+  },
+  "preservation": {
+    "region_exclusive": [
+      775,
+      195,
+      930,
+      310
+    ],
+    "changed_pixels": 549,
+    "changed_pixels_outside_region": 0,
+    "method": "Only generated dark charcoal/red-ochre pigment composited over the original rock; no pixel brightened. Strengthened the retained pigment after the first visual review found it too faint."
+  },
+  "generator": "installed mcp image generator",
+  "generated_dimensions": [
+    1536,
+    1024
+  ],
+  "prompt": "Two bent charcoal reeds lean toward each other with a worn red-ochre pebble between them; primitive earth pigment on pale stone; no text, hands, other figures or symbols. Only new pigment retained on vacant upper-right rock.",
+  "visual_review": "Inspected final PNG and decoded 512px JPEG: recognizable Pepe with broad mouth and heavy-lidded eyes, both inherited hands have four fingers and one thumb. No new hands. Charcoal bent reeds and ochre stone added on upper-right rock. No letters, numbers, logos, watermark, border, real people or prohibited symbols observed.",
+  "unmet_visual_requirements": [],
+  "limitations": [
+    "Local visual review is not independent certification. Conservative name screen is not every filesystem equivalence rule.",
+    "The small worn motif is more legible in the PNG; JPEG reduction softens its fine strokes."
+  ]
+}

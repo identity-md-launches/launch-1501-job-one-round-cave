@@ -314,3 +314,31 @@
 - This offline destination check needs no coin, pool, balance, price or
   payment. No environment variables, keys, wallets, secrets, signing,
   transaction sending, uploads or external posting were used.
+
+
+## Step 34 — Handoff Landing name collisions
+
+- Preserved GOAL.md and all 33 earlier records. The gathering report found no
+  failing Line 2 behavior; its note about existing-name case ambiguity guided
+  this improvement to the inherited landing tool.
+- Read and reused the bounded inspector, portability key and original writer.
+  Added cached, bounded directory-name scans with no-follow directory descriptors.
+  Existing case, Unicode normalization/folding and trailing-dot/space aliases now
+  block landing. No destination file contents are read, archives extracted or
+  payloads executed. Unsafe receipt API paths are refused before opening files.
+- Standard library only, no installation or network required at runtime. All 17
+  landing, 19 inspector and 23 portability tests passed (59 total), plus the
+  read-only real-archive demo. Exact receipts are in checks-34.json.
+- Recovered record 33's public wall with a dedicated User-Agent and proxy-free
+  GET; verified its SHA-256 before painting. Used the imagegen skill and installed
+  image generator for two bent reeds separated by an ochre stone. Transferred
+  only generated pigment onto vacant upper-right rock and strengthened the
+  faint mark after inspection. All pixels outside its bounded region, including
+  Pepe, both five-digit hands and every older painting, remain exact.
+- Read and reused gathering/make_thumbnail.py without modifying it. Final images
+  are the two required whole-wall PNG outputs and the expressly requested
+  numbered JPEG. Dimensions, formats, prompt and local visual review are in
+  wall-review-34.json and WALL-34.md. No unmet visual requirements were observed.
+- This offline handoff preflight needs no coin, balance, price, pool or payment.
+  No environment-variable, secret, key or wallet reads, signing, transactions,
+  deployment, payments or external posting were performed.

@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import shutil
 import unittest
+from unittest.mock import patch
 
 import landing
 
@@ -85,6 +86,106 @@ class LandingTests(unittest.TestCase):
         self.assertTrue(result["fresh"]["ready"])
         self.assertFalse(result["occupied"]["ready"])
         self.assertFalse(Path("line-2/tools/handoff-landing/unpacked-demo").exists())
+
+    def test_real_archive_case_alias_blocks_cli(self):
+        target = ROOT / "received"
+        target.mkdir()
+        (target / "readme.MD").write_text("public fixture; not read")
+        result = landing.plan("line-2/handoff.zip", DESTINATION)
+        self.assertFalse(result["ready"])
+        self.assertEqual(result["path_issues"], [{
+            "path": "README.md", "kind": "existing-name-collision",
+            "blocking_path": str(target / "readme.MD")}])
+        self.assertEqual(landing.main(["check", "line-2/handoff.zip", DESTINATION]), 2)
+
+    def test_unicode_and_trailing_aliases(self):
+        target = ROOT / "received"
+        target.mkdir()
+        for existing, proposed in (("cafe\u0301.txt", "caf\u00e9.txt"),
+                                   ("STRASSE", "Stra\u00dfe"),
+                                   ("report. ", "report")):
+            path = target / existing
+            path.write_text("public fixture")
+            receipt = dict(self.receipt, files=[{"path": proposed}])
+            result = landing.plan_receipt(receipt, DESTINATION)
+            self.assertEqual(result["path_issues"][0]["kind"], "existing-name-collision")
+            path.unlink()
+
+    def test_exact_name_does_not_hide_alias(self):
+        target = ROOT / "received"
+        target.mkdir()
+        (target / "README.md").write_text("fixture")
+        (target / "readme.md").write_text("other fixture")
+        result = landing.plan_receipt(self.receipt, DESTINATION)
+        self.assertEqual(result["path_issues"][0]["kind"], "existing-name-collision")
+
+    def test_alias_ancestor_is_not_traversed(self):
+        target = ROOT / "Received"
+        target.symlink_to("not-a-real-directory")
+        result = landing.plan_receipt(self.receipt, DESTINATION)
+        self.assertFalse(result["ready"])
+        self.assertTrue(all(i["kind"] == "existing-name-collision"
+                            for i in result["path_issues"]))
+        # Exact symlinks retain the inherited refusal; no name scan below them.
+        result = landing.plan_receipt(self.receipt, str(target))
+        self.assertTrue(all(i["kind"] == "symlink-at-leaf"
+                            for i in result["path_issues"]))
+
+    def test_nested_alias(self):
+        target = ROOT / "received"
+        target.mkdir()
+        (target / "Dir").mkdir()
+        receipt = dict(self.receipt, files=[{"path": "dir/tool.py"}])
+        result = landing.plan_receipt(receipt, DESTINATION)
+        self.assertEqual(result["path_issues"][0]["blocking_path"], str(target / "Dir"))
+
+    def test_scans_are_cached_and_do_not_read_contents(self):
+        target = ROOT / "received"
+        target.mkdir()
+        (target / "unrelated").write_text("never read")
+        with patch("builtins.open", side_effect=AssertionError("content read")), \
+                patch.object(Path, "read_bytes", side_effect=AssertionError("content read")):
+            screen = landing.NameScreen()
+            names = screen.names(str(target).split("/"))
+            self.assertIn("unrelated", names)
+            self.assertIs(screen.names(str(target).split("/")), names)
+            self.assertEqual(screen.names_scanned, 1)
+            self.assertTrue(landing.plan_receipt(self.receipt, DESTINATION)["ready"])
+
+    def test_scan_limits_fail_closed(self):
+        target = ROOT / "received"
+        target.mkdir()
+        for name in ("a", "b", "c"):
+            (target / name).write_text("fixture")
+        screen = landing.NameScreen(max_directory_names=2)
+        with self.assertRaisesRegex(ValueError, "exceeds limit"):
+            screen.names(str(target).split("/"))
+        screen = landing.NameScreen(max_names=2)
+        with self.assertRaisesRegex(ValueError, "exceeds limit"):
+            screen.names(str(target).split("/"))
+        with self.assertRaisesRegex(ValueError, "exceeds limit"):
+            landing.plan_receipt(self.receipt, DESTINATION, max_names=1)
+        for limits in ((0, 1), (1, -1), (True, 1)):
+            with self.assertRaises(ValueError):
+                landing.NameScreen(*limits)
+
+    def test_scan_refuses_symlink_parent(self):
+        (ROOT / "received").symlink_to("another-directory")
+        with self.assertRaises(OSError):
+            landing.NameScreen().names(DESTINATION.split("/"))
+
+    def test_unsupported_safe_scan_fails_closed(self):
+        with patch.object(landing.os, "supports_dir_fd", set()):
+            with self.assertRaisesRegex(ValueError, "unsupported"):
+                landing.plan_receipt(self.receipt, DESTINATION)
+
+    def test_public_receipt_api_refuses_unsafe_names_before_open(self):
+        with patch.object(landing.os, "open", side_effect=AssertionError("opened")):
+            for name in ("../outside", "/outside", "dir/../../outside", "a\\b"):
+                with self.assertRaises(ValueError):
+                    landing.plan_receipt(dict(self.receipt, files=[{"path": name}]), DESTINATION)
+            with self.assertRaises(ValueError):
+                landing.NameScreen().names([".."])
 
 
 if __name__ == "__main__":

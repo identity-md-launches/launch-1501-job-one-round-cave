@@ -1,0 +1,26 @@
+{
+  "all_passed": true,
+  "record": 34,
+  "goal_unchanged": true,
+  "older_records_unchanged": true,
+  "wall_dimensions": [
+    1254,
+    1254
+  ],
+  "wall_format": "PNG RGB",
+  "thumbnail_dimensions": [
+    512,
+    512
+  ],
+  "thumbnail_format": "JPEG",
+  "thumbnail_bytes": 75313,
+  "named_outputs_untracked": true,
+  "sha256": "82f449b64789a355e21770bdb6c40ee4519042db7685abe105e53506e62f8ab7",
+  "modified_tracked_paths": [
+    "line-2/USED.md",
+    "line-2/tools/handoff-landing/README.md",
+    "line-2/tools/handoff-landing/landing.py",
+    "line-2/tools/handoff-landing/test_landing.py"
+  ],
+  "unmet_visual_requirements": []
+}
