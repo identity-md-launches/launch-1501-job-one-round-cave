@@ -1,0 +1,30 @@
+{
+  "name": "The Single Pebble",
+  "image": "https://api.imd.fun/artifacts/84b0c0c44a774bc997ee52c7932321cd41aabd4535e067f7f798fcc6d73692ae",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Base"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 1"
+    },
+    {
+      "trait_type": "Number",
+      "value": 34
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "snapshot-seal"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "A single ochre pebble rests inside a tied charcoal pouch, keeping one observation unambiguous."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "portable live Ethereum state snapshots"
+    }
+  ]
+}

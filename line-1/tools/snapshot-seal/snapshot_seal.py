@@ -4,7 +4,9 @@ import argparse
 import hashlib
 import importlib.util
 import json
+import os
 from pathlib import Path
+import stat
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -14,13 +16,41 @@ pinned = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(pinned)
 MAX_BYTES = 4 * 1024 * 1024
 SCHEMA = 'pinned-zto-seal/1'
+WORKSPACE = Path(__file__).resolve().parents[3]
 
 
 def read_bytes(path):
-    data = Path(path).read_bytes()
-    if len(data) > MAX_BYTES:
-        raise ValueError('file exceeds 4 MiB')
-    return data
+    # Walk from an already-open workspace directory. Reject symlinks at every
+    # component; dir_fd and O_NOFOLLOW also protect against path-swap races.
+    candidate = Path(os.path.abspath(path))
+    try:
+        parts = candidate.relative_to(WORKSPACE).parts
+    except ValueError as exc:
+        raise ValueError('input must be inside this workspace') from exc
+    if not parts:
+        raise ValueError('input must be a regular file')
+    directory = os.open(WORKSPACE, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)
+    try:
+        for part in parts[:-1]:
+            child = os.open(part, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW,
+                            dir_fd=directory)
+            os.close(directory)
+            directory = child
+        info = os.stat(parts[-1], dir_fd=directory, follow_symlinks=False)
+        if not stat.S_ISREG(info.st_mode) or info.st_size > MAX_BYTES:
+            raise ValueError('input must be a regular file of at most 4 MiB')
+        descriptor = os.open(parts[-1], os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK,
+                             dir_fd=directory)
+        with os.fdopen(descriptor, 'rb') as stream:
+            info = os.fstat(stream.fileno())
+            if not stat.S_ISREG(info.st_mode) or info.st_size > MAX_BYTES:
+                raise ValueError('input must be a regular file of at most 4 MiB')
+            data = stream.read(MAX_BYTES + 1)
+        if len(data) > MAX_BYTES:
+            raise ValueError('file exceeds 4 MiB')
+        return data
+    finally:
+        os.close(directory)
 
 
 def canonical(value):
@@ -31,7 +61,7 @@ def canonical(value):
 def load_snapshot(path):
     raw = read_bytes(path)
     try:
-        value = json.loads(raw)
+        value = pinned.rpc.strict_json(raw)
     except (UnicodeDecodeError, json.JSONDecodeError) as exc:
         raise ValueError('snapshot is not valid JSON') from exc
     facts = pinned.inspect(value)
@@ -58,7 +88,7 @@ def seal(path):
 def verify(snapshot_path, receipt_path):
     receipt_raw = read_bytes(receipt_path)
     try:
-        receipt = json.loads(receipt_raw)
+        receipt = pinned.rpc.strict_json(receipt_raw)
     except (UnicodeDecodeError, json.JSONDecodeError) as exc:
         raise ValueError('receipt is not valid JSON') from exc
     expected = seal(snapshot_path)

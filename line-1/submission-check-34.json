@@ -1,0 +1,20 @@
+{
+  "path_scope": "passed",
+  "goal_unchanged": true,
+  "older_records_unchanged": true,
+  "wall_record_hash": "matched",
+  "wall_png": [
+    1254,
+    1254
+  ],
+  "jpeg": [
+    512,
+    512
+  ],
+  "required_outputs_untracked": true,
+  "seal_tests_passed": 17,
+  "related_tests_passed": 25,
+  "real_zto_block": 26180977,
+  "offline_receipt_verified": true,
+  "no_gathering_changes": true
+}

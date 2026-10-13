@@ -1,0 +1,35 @@
+{
+  "source_record": 33,
+  "record_number": 34,
+  "source_sha256": "1f746a0fb6b94d389156f80ca510b8d7502ebc6e677aa71b5421d45d0cc68778",
+  "generated_sha256": "ca0bd449c50d1fad40ce17579daececdb900b517aac62cb7bf80c46e08ca267a",
+  "wall_sha256": "84b0c0c44a774bc997ee52c7932321cd41aabd4535e067f7f798fcc6d73692ae",
+  "png_dimensions": [
+    1254,
+    1254
+  ],
+  "png_format": "8-bit RGB PNG",
+  "png_bytes": 3837530,
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "jpeg_format": "baseline JPEG",
+  "jpeg_bytes": 62129,
+  "addition_rectangle": [
+    810,
+    125,
+    115,
+    140
+  ],
+  "changed_pixels": 3727,
+  "changed_pixels_outside_rectangle": 0,
+  "generation_tool": "image_gen.imagegen",
+  "visual_review": "Inspected final PNG and 512px JPEG. Pepe keeps his broad mouth and heavy-lidded eyes. Each inherited hand has four fingers and one thumb, five digits; no new hand or stencil was added. The upper-right charcoal pouch contains one ochre pebble. All ancestor marks, rock, cracks, lighting and framing were retained. No text, numbers, captions, signatures, logos, watermarks, borders, real people, political or hateful symbols were seen. Local visual review only.",
+  "new_hands_or_stencils": 0,
+  "unmet_visual_requirements": [],
+  "visual_limitations": [
+    "Inherited rock is photographic-looking and is preserved as required.",
+    "The new pouch is small and subdued at thumbnail size."
+  ]
+}
